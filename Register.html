@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="menu"> 
+            <!-- Navigation Menu -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">Guidelines</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div> 
+
+        <div class="form">
+            <h2>Register for Session</h2>
+            <form action="Register.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="Institution" placeholder="Your Institution">
+                <!-- Hidden session name field -->
+                <input type="hidden" name="session_name" id="session-name">
+                <button class="btnn" type="submit">Submit Registration</button>
+            </form>
+        </div>
+    
+        <script>
+            // Get the session name from the URL query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionName = urlParams.get('session_name');
+    
+            // Set the session name in the hidden field
+            document.getElementById('session-name').value = sessionName;
+        </script>             
+    </div>
+
+</body>
+</html>

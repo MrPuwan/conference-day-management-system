@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="qrgen.css">
+    <title>QR Code Generation</title>
+    <!-- Include html2canvas library for capturing the QR code as an image -->
+    
+
+</head>
+<body>
+    <div id="bagground" class="bagground">
+        <div id="fild">
+            <div id="qrbox">
+                <div id="qr-code">
+                    <!-- QR code image will be inserted here -->
+                    <img src="" id="qrimage" alt="QR Code">
+                </div>
+            </div>
+            <div id="massage">
+                <p>Successfully registered!</p>
+            </div>
+            <button id="download-btn" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
+                Download QR Code
+            </button>
+        </div>
+    </div>
+
+    <script src="qrgen.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+
+</body>
+</html>

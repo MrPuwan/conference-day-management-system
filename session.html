@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling for the table */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.3); /* Transparent background for the table */
+            border-radius: 8px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #904308;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent background for even rows */
+        }
+
+        table tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent background for odd rows */
+        }
+
+        table tr:hover {
+            background-color: rgba(255, 255, 255, 0.4); /* Slightly darker transparent background on hover */
+        }
+
+        /* Styling for the button */
+        .cn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .cn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">Guidelines</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Table for Sessions -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Session Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Speaker</th>
+                    <th>Register</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Introduction to Web Development</td>
+                    <td>January 5, 2025</td>
+                    <td>10:00 AM</td>
+                    <td>John Doe</td>
+                    <td><button class="cn" onclick="location.href='Register.html?session_name=Introduction%20to%20Web%20Development'">Register Now</button></td>
+                </tr>
+                <tr>
+                    <td>Effective Time Management Techniques</td>
+                    <td>January 6, 2025</td>
+                    <td>11:00 AM</td>
+                    <td>Jane Smith</td>
+                    <td><button class="cn" onclick="location.href='Register.html?session_name=Effective%20Time%20Management%20Techniques'">Register Now</button></td>
+                </tr>
+                <tr>
+                    <td>AI and Machine Learning</td>
+                    <td>January 7, 2025</td>
+                    <td>2:00 PM</td>
+                    <td>Dr. Alan Tran</td>
+                    <td><button class="cn" onclick="location.href='Register.html?session_name=AI%20and%20Machine%20Learning'">Register Now</button></td>
+                </tr>
+                <tr>
+                    <td>Building a Personal Brand Online</td>
+                    <td>January 8, 2025</td>
+                    <td>3:00 PM</td>
+                    <td>Sara Lee</td>
+                    <td><button class="cn" onclick="location.href='Register.html?session_name=Building%20a%20Personal%20Brand%20Online'">Register Now</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="content">
+            <p class="par"> Whether you're presenting groundbreaking research or just here to gain insights, we've got you covered.</p>
+        </div>  
+    </div>
+
+</body>
+</html>
