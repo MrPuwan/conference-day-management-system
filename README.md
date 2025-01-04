@@ -47,56 +47,14 @@ cd conference-day-management-system
 2. Create a new database called `conference_db`.
 3. Import the database schema from the `database` folder (if available) or run the following SQL commands:
 
-```sql
-CREATE DATABASE conference_db;
-USE conference_db;
 
--- Add tables for sessions, speakers, attendees, etc.
-CREATE TABLE sessions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    speaker_id INT,
-    start_time DATETIME,
-    end_time DATETIME,
-    venue VARCHAR(255)
-);
-
-CREATE TABLE speakers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    bio TEXT,
-    topic VARCHAR(255)
-);
-
-CREATE TABLE attendees (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE,
-    registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
 
 ### Configure PHP environment
 
 1. Place the entire project folder in the `htdocs` directory (for XAMPP).
 2. Make sure the `config.php` file contains the correct database connection details:
 
-```php
-<?php
-$servername = "localhost";
-$username = "root";  // Default username for XAMPP
-$password = "";      // Default password for XAMPP is empty
-$dbname = "conference_db";  // Name of the database
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-?>
-```
 
 ### Run the application
 
